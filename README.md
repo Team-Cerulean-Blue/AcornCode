@@ -14,6 +14,14 @@ For help in using these programs, run `python3 encode.py --help` or `python3 dec
 
 Please keep in mind that the decoder will only work with clean images of Acorn Codes: if it is an image taken from a camera, or transformed in any way, it will not decode the Acorn Code correctly.
 
+---
+
+Both of these programs can also be imported as Python modules: You can get the decoder with `from decode import decode` (where `decode` has to be ran as `decode(img, scale*)`). You can also name `decode` something else by importing the function with an alias (`from decode import decode as function_name`).
+
+The same applies to `encode`, where `encode` has to be ran as `encode(content, scale*, ratio*, requested_width*, requested_height*, reserve_unused*, transparent_unused*, showProgress*)` where `showProgress` is a callback function with 2 arguments (`idx` and `length`) where the percentage can be calculated from `idx/length*100`.
+
+`*` means that the argument is optional.
+
 
 ## Parts of an Acorn Code
 
